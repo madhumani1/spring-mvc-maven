@@ -24,11 +24,17 @@ Country:
 </form:select>
 <br><br>
 Favorite Programming Languages: <br>
-<form:radiobutton path="favoriteLanguage" value="Java" /> &nbsp;Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%-- <form:radiobutton path="favoriteLanguage" value="Java" /> &nbsp;Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <form:radiobutton path="favoriteLanguage" value="CPP" /> &nbsp;C/C++<br>
 <form:radiobutton path="favoriteLanguage" value="Node" /> &nbsp;Node &nbsp;&nbsp;&nbsp;&nbsp;
 <form:radiobutton path="favoriteLanguage" value="Cloud" />  &nbsp;Cloud&nbsp;&nbsp;&nbsp;&nbsp;
-<form:radiobutton path="favoriteLanguage" value="Net" /> &nbsp;.Net 
+<form:radiobutton path="favoriteLanguage" value="Net" /> &nbsp;.Net  --%>
+<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"  />
+<br><br>
+<form:checkbox path="operatingSystems" value="Linux" /> Linux
+<form:checkbox path="operatingSystems" value="Android" /> Android
+<form:checkbox path="operatingSystems" value="Linux" /> MacOS
+<form:checkbox path="operatingSystems" value="Windows" /> Windows
 <br><br>
 <input type="submit" value="Submit" />
 </form:form>

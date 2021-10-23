@@ -19,6 +19,24 @@ public class Student {
 		countryOptions.put("IND", "India");
 		countryOptions.put("CHN", "China");
 		countryOptions.put("SAF", "South Africa");*/
+		favoriteLanguageOptions = new LinkedHashMap<>();
+		favoriteLanguageOptions.put("Java", "Java");
+		favoriteLanguageOptions.put("C/C++", "CPP");
+		favoriteLanguageOptions.put("Node", "Node");
+		favoriteLanguageOptions.put("Cloud", "Cloud");
+		favoriteLanguageOptions.put("Net", "Net");
+	}
+	/**
+	 * @return the operatingSystems
+	 */
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+	/**
+	 * @param operatingSystems the operatingSystems to set
+	 */
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 	/**
 	 * @return the favoriteLanguage
@@ -31,6 +49,13 @@ public class Student {
 	 */
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
+		return favoriteLanguageOptions;
 	}
 	/*
 	 public LinkedHashMap<String, String> getCountryOptions() {
@@ -60,4 +85,6 @@ public class Student {
 	private String country;
 	private String favoriteLanguage;
 	//private LinkedHashMap<String, String> countryOptions;
+	private LinkedHashMap<String, String> favoriteLanguageOptions;
+	private String[] operatingSystems;
 }

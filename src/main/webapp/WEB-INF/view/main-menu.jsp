@@ -18,5 +18,7 @@
 <a href="showFormVersionTwo">Hello World Form (with age)</a>
 <br><br>
 <a href="student/showForm">Student Form</a>
+<br><br>
+<input type="button" onclick="doSomeWork()" value="Click Me"/>
 </body>
 </html>
