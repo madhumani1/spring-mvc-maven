@@ -12,3 +12,13 @@ p {
     font-family: verdana;
     font-size: 20px;
 }
+
+.error	{
+	color: red;
+	font-weight: bold;
+}
+
+.output	{
+	color: brown;
+	font-weight: bold;
+}

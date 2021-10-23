@@ -6,12 +6,12 @@ package com.example.springdemo.mvc;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @author 15197
@@ -60,7 +60,6 @@ public class HelloWorldController {
 		// read the request parameter from HTML form
 		String theName = request.getParameter("studentName");
 		String theAge = request.getParameter("studentAge");
-		
 		// convert the data to all caps
 		theName = theName.toUpperCase();
 		
