@@ -23,6 +23,13 @@ Country:
 	<form:options items="${theCountryOptions}" />
 </form:select>
 <br><br>
+Favorite Programming Languages: <br>
+<form:radiobutton path="favoriteLanguage" value="Java" /> &nbsp;Java &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<form:radiobutton path="favoriteLanguage" value="CPP" /> &nbsp;C/C++<br>
+<form:radiobutton path="favoriteLanguage" value="Node" /> &nbsp;Node &nbsp;&nbsp;&nbsp;&nbsp;
+<form:radiobutton path="favoriteLanguage" value="Cloud" />  &nbsp;Cloud&nbsp;&nbsp;&nbsp;&nbsp;
+<form:radiobutton path="favoriteLanguage" value="Net" /> &nbsp;.Net 
+<br><br>
 <input type="submit" value="Submit" />
 </form:form>
 </body>
