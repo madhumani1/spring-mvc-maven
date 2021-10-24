@@ -36,7 +36,7 @@ public @interface CourseCode {
 	 * private String courseCode;
 	 * @return
 	 */
-	public String value() default "MAD";	
+	public String[] value() default {"MAD"};	
 	
 	// define default error message
 	public String message() default "must start with MAD";

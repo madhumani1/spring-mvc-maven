@@ -93,7 +93,8 @@ public class Customer {
 	private String postalCode;
 	
 	// use custom validation on courseCode
-	@CourseCode(value="PAS", message="must start with PAS")
+	//@CourseCode(value="PAS", message="must start with PAS")
+	@CourseCode(value={"MAD","PRI","ATH","SAT"}, message="must start with MAD,PRI,ATH,SAT")
 	@NotNull(message="is required")
 	private String courseCode;
 }

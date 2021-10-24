@@ -14,7 +14,7 @@ import javax.validation.ConstraintValidatorContext;
 public class CourseCodeConstraintValidator implements ConstraintValidator<CourseCode, String> {
 
 	// setup field 
-	private String coursePrefix;
+	private String[] coursePrefix;
 	
 	/**
 	 * When validator is created, it initialize it to get handle to the actual annotation that was passed in
@@ -33,9 +33,19 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
 	@Override
 	public boolean isValid(String theCode, 
 						ConstraintValidatorContext theConstraintValidatorContext) {
-		boolean result;
+		boolean result=false;
 		if (theCode != null) {
-			result = theCode.startsWith(coursePrefix);
+			//result = theCode.startsWith(coursePrefix);
+			//loop through array of prefixes
+			// check to see if code matches any of the course prefix
+			for(String allowedPrefix : coursePrefix)	{
+				result = theCode.startsWith(allowedPrefix);
+				
+				//if match is found, break out
+				if(result)	{
+					break;
+				}
+			}
 		}
 		else {
 			result = true;
