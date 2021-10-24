@@ -6,6 +6,7 @@ package com.example.springdemo.model;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -40,6 +41,24 @@ public class Customer {
 		this.age = age;
 	}
 
+	/**
+	 * @return the postalCode
+	 */
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	/**
+	 * @param postalCode the postalCode to set
+	 */
+	public void setPostalCode(String postalCode) {
+		if(postalCode!=null)	{
+			this.postalCode = postalCode.toUpperCase();
+		} else	{
+			this.postalCode = postalCode;
+		}
+	}
+
 	private String firstName;
 	@NotNull(message="is required")
 	@Size(min=1,message="is required")
@@ -48,4 +67,8 @@ public class Customer {
 	@Min(value=18, message="age must be greater than or equal to 18")
 	@Max(value=65, message="age must be less than or equal to 65")
 	private int age;
+	
+	@Pattern(regexp="^[A-Za-z]\\d[A-Za-z][ -]?\\d[A-Za-z]\\d$", message="A1A 1A1, where A is a letter and 1 is a digit")
+	@NotNull(message="is required")
+	private String postalCode;
 }
