@@ -31,13 +31,13 @@ public class Customer {
 	/**
 	 * @return the age
 	 */
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 	/**
 	 * @param age the age to set
 	 */
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -66,7 +66,8 @@ public class Customer {
 	
 	@Min(value=18, message="age must be greater than or equal to 18")
 	@Max(value=65, message="age must be less than or equal to 65")
-	private int age;
+	@NotNull(message="is required")
+	private Integer age;	// Integer advantage - if field is blank or has spaces then it will be trimmed to null using initBinder
 	
 	@Pattern(regexp="^[A-Za-z]\\d[A-Za-z][ -]?\\d[A-Za-z]\\d$", message="A1A 1A1, where A is a letter and 1 is a digit")
 	@NotNull(message="is required")

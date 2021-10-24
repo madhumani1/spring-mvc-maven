@@ -66,6 +66,19 @@ public class CustomerController {
 		System.out.println("Age: |" + theCustomer.getAge()+"|");
 		System.out.println("Postal Code: |" + theCustomer.getPostalCode()+"|");
 		
+		//I unput Madhu for age and got the following result
+		//Binding Result: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+		//Field error in object 'customer' on field 'age': rejected value [madhu]; 
+		//codes [typeMismatch.customer.age,typeMismatch.age,typeMismatch.java.lang.Integer,typeMismatch]; 
+		//arguments [org.springframework.context.support.DefaultMessageSourceResolvable: 
+		//codes [customer.age,age]; arguments []; default message [age]]; 
+		//default message [Failed to convert property value of type 'java.lang.String' to required type 
+		//'java.lang.Integer' for property 'age'; nested exception is java.lang.NumberFormatException: For input string: "madhu"]
+		//
+		//
+		// We  are overriding typeMismatch.customer.age with our message
+		System.out.println("Binding Result: "+theBindingResult);
+		System.out.println("\n\n\n");
 		if (theBindingResult.hasErrors()) {
 			return "customer-form";
 		}
