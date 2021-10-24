@@ -9,6 +9,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.example.springdemo.validation.CourseCode;
+
 /**
  * @author 15197
  *
@@ -59,6 +61,23 @@ public class Customer {
 		}
 	}
 
+	/**
+	 * @return the courseCode
+	 */
+	public String getCourseCode() {
+		return courseCode;
+	}
+	/**
+	 * @param courseCode the courseCode to set
+	 */
+	public void setCourseCode(String courseCode) {
+		if(courseCode!=null)	{
+			this.courseCode = courseCode.toUpperCase();
+		}	else	{
+			this.courseCode = courseCode;
+		}
+	}
+
 	private String firstName;
 	@NotNull(message="is required")
 	@Size(min=1,message="is required")
@@ -72,4 +91,9 @@ public class Customer {
 	@Pattern(regexp="^[A-Za-z]\\d[A-Za-z][ -]?\\d[A-Za-z]\\d$", message="A1A 1A1, where A is a letter and 1 is a digit")
 	@NotNull(message="is required")
 	private String postalCode;
+	
+	// use custom validation on courseCode
+	@CourseCode(value="PAS", message="must start with PAS")
+	@NotNull(message="is required")
+	private String courseCode;
 }

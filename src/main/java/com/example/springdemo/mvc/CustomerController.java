@@ -65,6 +65,7 @@ public class CustomerController {
 		System.out.println("First name: |" + theCustomer.getFirstName() + "|" + "Last name: |" + theCustomer.getLastName() + "|");
 		System.out.println("Age: |" + theCustomer.getAge()+"|");
 		System.out.println("Postal Code: |" + theCustomer.getPostalCode()+"|");
+		System.out.println("Course Code: |" + theCustomer.getCourseCode()+"|");
 		
 		//I unput Madhu for age and got the following result
 		//Binding Result: org.springframework.validation.BeanPropertyBindingResult: 1 errors

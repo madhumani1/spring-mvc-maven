@@ -13,6 +13,7 @@
 The customer is confirmed: <span class="output">${customer.firstName} ${customer.lastName}</span>
 The customer age: <span class="output">${customer.age}</span>
 The Postal Code: <span class="output">${customer.postalCode}</span>
+The Course Code: <span class="output">${customer.courseCode}</span>
 <br><br>
 <a href="../">Back to main menu</a>
 </body>
