@@ -11,6 +11,7 @@
 </head>
 <body>
 The customer is confirmed: <span class="output">${customer.firstName} ${customer.lastName}</span>
+The customer age: <span class="output">${customer.age}</span>
 <br><br>
 <a href="../">Back to main menu</a>
 </body>
